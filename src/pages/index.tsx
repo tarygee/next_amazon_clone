@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner";
-import Products from "@/components/header/Products";
+import Products from "@/components/Products";
 import { ProductProps } from "../../type";
 
 interface Props{

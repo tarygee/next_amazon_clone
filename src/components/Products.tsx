@@ -1,9 +1,9 @@
 import React from 'react'
-import { ProductProps } from '../../../type';
+import { ProductProps } from '../../type';
 import Image from 'next/image';
 import{ FaHeart } from 'react-icons/fa'
 import { HiShoppingCart } from 'react-icons/hi'
-import FormattedPrice from '../FormattedPrice';
+import FormattedPrice from './FormattedPrice';
 import {useDispatch} from 'react-redux'
 import { addToCart, addToFavorite } from '@/store/nextSlice';
 
