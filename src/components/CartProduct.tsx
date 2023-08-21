@@ -16,7 +16,7 @@ interface Item{
     oldPrice: number;
     price: number;
     title: string;
-    _id: number;
+    id: number;
     quantity: number;
 }
 interface CartProductProps{
@@ -50,7 +50,7 @@ const CartProduct = ({item}: CartProductProps) => {
                     onClick={() => 
                         dispatch(
                             increaseQuantity({
-                                _id: item._id,
+                                id: item.id,
                                 brand: item.brand,
                                 category: item.category,
                                 image: item.image,
@@ -70,7 +70,7 @@ const CartProduct = ({item}: CartProductProps) => {
                     onClick={() => 
                         dispatch(
                             decreaseQuantity({
-                                _id: item._id,
+                                id: item.id,
                                 brand: item.brand,
                                 category: item.category,
                                 image: item.image,
@@ -87,7 +87,7 @@ const CartProduct = ({item}: CartProductProps) => {
                     </span>
                     </div>
                     <div 
-                    onClick={() => dispatch(deleteProduct(item._id))}
+                    onClick={() => dispatch(deleteProduct(item.id))}
                     className='flex items-center text-sm font-medium text-gray-400 hover:text-red-600 cursor-pointer duration-300'>
                         <IoMdClose className='mt-[2px]'/><p>remove</p>
                     </div>

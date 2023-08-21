@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { StateProps } from '../../../type';
 import { removeUser } from '@/store/nextSlice';
 import { signOut } from 'next-auth/react';
+import Link from 'next/link';
 
 const BottomHeader = () => {
     const dispatch = useDispatch();
@@ -31,9 +32,10 @@ const BottomHeader = () => {
         <p className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
             Gift Cards
         </p>
-        <p className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
+        <Link href={'/SignUp'}
+        className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
             Sell
-        </p>
+        </Link>
         {userInfo && (
             < button 
             onClick={handleSignOut}
